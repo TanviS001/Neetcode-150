@@ -1,3 +1,23 @@
+# Optimized Approach o(n) time complexity, o(1) space complexity 
+
+class Solution:
+    def isAnagram(self, s: str, t: str) -> bool:
+        if len(s)!=len(t):
+            return False
+        
+        count=[0]*26
+
+        for ch in s:
+            count[ord(ch)-ord('a')]+=1
+
+        for ch in t:
+            count[ord(ch)-ord('a')]-=1
+            if count[ord(ch)-ord('a')]<0:
+                return False
+        
+        return True
+
+# Naive Approach
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
         s_dic={}
@@ -19,3 +39,5 @@ class Solution:
                 return False
                 
         return True
+
+
