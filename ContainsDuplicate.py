@@ -11,7 +11,7 @@ class Solution:
         return False
 
 
-# alternative (worse) o(nlogn) space complexity due to Timsort 
+# alternative (worse) o(nlogn) time complexity due to Timsort 
 
 class Solution:
     def hasDuplicate(self, nums: List[int]) -> bool:
